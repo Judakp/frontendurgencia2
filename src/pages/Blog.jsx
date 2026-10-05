@@ -1,16 +1,28 @@
-import React, { useState } from "react";
-import BlogList from "../components/BlogList";
+import React from 'react';
+import '../App.css';
 
-export default function Blog() {
-  const [articles] = useState(() => {
-    const saved = localStorage.getItem("blog_articles");
-    return saved ? JSON.parse(saved) : [];
-  });
+const Blog = () => (
+  <div className="page-shell">
+    <header className="page-header">
+      <span className="page-kicker">Guides · Ouidah</span>
+      <h1>Blog</h1>
+      <p>Conseils, découvertes et informations pratiques pour les visiteurs de Ouidah.</p>
+    </header>
 
-  return (
-    <div className="blog-page">
-      <h1>Mon Blog</h1>
-      <BlogList articles={articles} />
+    <div className="blog-grid">
+      <article className="blog-card">
+        <h2>Découverte de Ouidah</h2>
+        <p>Explorez les lieux, les services et les informations pratiques qui peuvent rendre votre séjour plus agréable.</p>
+        <span className="page-kicker">Article à venir</span>
+      </article>
+
+      <article className="blog-card">
+        <h2>Conseils santé pour voyageurs</h2>
+        <p>Découvrez quelques réflexes simples pour mieux préparer votre séjour et savoir où demander de l'aide.</p>
+        <span className="page-kicker">Article à venir</span>
+      </article>
     </div>
-  );
-}
+  </div>
+);
+
+export default Blog;

@@ -1,36 +1,33 @@
-import React from "react";
-import "./About.css";
+import React from 'react';
+import '../App.css';
 
-export default function About() {
-  return (
-    <div className="about-container">
-      <h1 className="about-title">À propos de notre entreprise</h1>
+const About = () => (
+  <div className="page-shell">
+    <header className="page-header">
+      <span className="page-kicker">À propos</span>
+      <h1>À propos d'Urgencia</h1>
+      <p>Un projet pensé pour rendre les services essentiels de Ouidah plus faciles à trouver.</p>
+    </header>
 
-      <div className="about-content">
-        <div className="about-image-wrapper">
-          <img
-            src="/Urgencia.jpg"
-            alt="Urgencia"
-            className="about-image"
-          />
-          <h2 className="company-name">Urgencia</h2> {/* Nom de l'entreprise */}
-        </div>
+    <section className="info-panel">
+      <h2>Notre objectif</h2>
+      <p>
+        Urgencia rassemble dans une interface simple les informations utiles
+        concernant les pharmacies, les hôpitaux et les services de secours.
+        L'objectif est de permettre aux habitants comme aux visiteurs de
+        trouver plus rapidement le bon service.
+      </p>
+    </section>
 
-        <div className="about-text">
-          <p>
-            Bienvenue sur notre plateforme ! Nous sommes une entreprise locale basée à Ouidah,
-            engagée à faciliter l'accès à des services essentiels comme la localisation rapide des pharmacies, hopitaux et postes de sapeurs pompiers.
-          </p>
-          <p>
-            L'objectif de ce site est de vous permettre de trouver rapidement une pharmacie, un hopital ou un poste de sapeurs pompiers, ouverts.
-            près de chez vous, avec des informations précises, des images, et même l'itinéraire via Google Maps.
-          </p>
-          <p>
-            Grâce à la géolocalisation, notre outil vous connecte automatiquement à la pharmacie la
-            plus proche pour vous faire gagner du temps et garantir votre santé et celle de vos proches.
-          </p>
-        </div>
-      </div>
-    </div>
-  );
-}
+    <section className="info-panel">
+      <h2>Une interface pensée pour l'urgence</h2>
+      <p>
+        Les informations importantes sont organisées pour être lisibles sur
+        ordinateur comme sur téléphone, avec une couleur rouge réservée aux
+        actions réellement urgentes.
+      </p>
+    </section>
+  </div>
+);
+
+export default About;
